@@ -17,3 +17,11 @@ IP Address: 192.168.1.200/24
 Gateway: 192.168.1.1
 
 DNS Server: 1.1.1.1
+
+### 3. Fortificación y Optimización Automatizada (Post-Instalación)
+Para estandarizar la configuración del servidor, corregir los repositorios por defecto y limpiar la interfaz web, se optó por utilizar el script de automatización de la comunidad (*Proxmox VE Community Scripts*).
+
+El proceso se lanzó directamente desde la **Shell** del nodo raíz (`pve`) mediante el siguiente comando paravirtualizado:
+
+```bash
+bash -c "$(curl -fsSL [https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh](https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh))"
